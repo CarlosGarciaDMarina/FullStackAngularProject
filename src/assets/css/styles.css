@@ -1,0 +1,76 @@
+/* Import custom fonts */
+@font-face {
+    font-family: "finger";
+    src: url("../fonts/finger.ttf");
+}
+
+@font-face {
+    font-family: "titilium";
+    src: url("../fonts/titilium.ttf");
+}
+
+@font-face {
+    font-family: "yanone";
+    src: url("../fonts/yanone.ttf");
+}
+
+/* General */
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    background: url("../img/pattern.png");
+    font-family: "yanone", Arial, Helvetica;
+    font-size: 20px;
+    background-attachment: fixed; /* It is necessary to keep the background fixed and prevent it from moving when the user scrolls */
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+
+}
+
+/* Navigation bar */
+header {
+    display: block;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(53, 103, 164, 0.8);
+    position: fixed;
+    text-transform: uppercase;
+}
+
+header ul {
+    display: block;
+    width: 38%;
+    height: inherit; /* Inherit means that it is inherited from the parent. */
+    margin: 0px auto;
+}
+header ul li {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 90px;
+}
+
+header a {
+    display: block;
+    padding: 0px 20px;
+    height: inherit;
+    text-decoration: none;
+    color: #FFF;
+    transition: all 300ms;
+}
+
+header a:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header #logo a:hover {
+    background-color: transparent;
+}
+

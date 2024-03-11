@@ -1,14 +1,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-//Imports
+//Components
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 
-//Rutas del proyecto
+//Paths of the project
 export const routes: Routes = [
     {path: '', component: AboutComponent},
     {path: 'sobre-mi', component: AboutComponent},
