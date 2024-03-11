@@ -11,7 +11,7 @@ import { ErrorComponent } from './components/error/error.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
+    RouterOutlet, // Importante importar el router tb para poder trabajar con él
     AboutComponent,
     ProjectsComponent,
     CreateComponent,
