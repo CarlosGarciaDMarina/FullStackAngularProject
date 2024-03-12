@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; // Imports the HttpClientModule module from Angular to allow making HTTP requests
+import { FormsModule } from '@angular/forms'; // Imports the FormsModule module from Angular to work with forms in the application
 import { RouterOutlet } from '@angular/router';
 import { Routes, RouterModule } from '@angular/router';
 
