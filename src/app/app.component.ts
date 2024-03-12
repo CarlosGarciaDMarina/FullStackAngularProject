@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+
 
 // Components
 import { AboutComponent } from './components/about/about.component';
@@ -13,6 +15,7 @@ import { ErrorComponent } from './components/error/error.component';
   standalone: true,
   imports: [
     RouterOutlet, // Important to import the router as well in order to work with it.
+    RouterModule, // Important to import the routermodule as well in order to work with the directive routerLink
     AboutComponent,
     ProjectsComponent,
     CreateComponent,
