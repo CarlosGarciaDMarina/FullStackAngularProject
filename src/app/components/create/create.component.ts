@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/projects';
 import { ProjectService } from '../../services/projects.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // We must declare the library to work with Angular forms
 
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule], // We must declare the component to work with it
   templateUrl: './create.component.html',
   styleUrl: './create.component.css',
   providers: [ProjectService]
