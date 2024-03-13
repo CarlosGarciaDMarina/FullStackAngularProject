@@ -1,3 +1,4 @@
+import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; // Imports the HttpClientModule module from Angular to allow making HTTP requests
 import { FormsModule } from '@angular/forms'; // Imports the FormsModule module from Angular to work with forms in the application
@@ -18,6 +19,8 @@ import { ErrorComponent } from './components/error/error.component';
   imports: [
     RouterOutlet, // Important to import the router as well in order to work with it.
     RouterModule, // Important to import the routermodule as well in order to work with the directive routerLink
+    HttpClientModule,
+    FormsModule,
     AboutComponent,
     ProjectsComponent,
     CreateComponent,
@@ -28,5 +31,4 @@ import { ErrorComponent } from './components/error/error.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'proyecto-angular';
 }
