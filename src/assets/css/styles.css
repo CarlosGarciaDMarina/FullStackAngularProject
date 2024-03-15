@@ -218,3 +218,31 @@ form input[disabled]{
     font-style: italic;
     
 }
+
+.message {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.succes {
+    color: #20c67a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.succes a {
+    color:rgba(16, 67, 133, 1);
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.failed {
+    color: #c80000;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-style: italic;
+}
