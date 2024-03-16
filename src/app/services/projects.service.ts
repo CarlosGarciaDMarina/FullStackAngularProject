@@ -27,4 +27,13 @@ export class ProjectService{
         return this._http.post(this.url + 'save-project', params, {headers: headers}); // We pass the URL of our API, concatenate the API method, pass the parameters, and the headers.
     }
 
+    // Method to obtain projects from the database
+    getProjects(): Observable<any> {
+        // We declare a variable to send information in JSON format
+        let headers = new HttpHeaders().set('Content-Type',"application/json");
+
+        // We make an AJAX petition using the GET method
+        return this._http.get(this.url + 'projects', {headers: headers});
+    }
+
 }
