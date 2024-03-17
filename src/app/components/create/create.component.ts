@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Project } from '../../models/projects';
+import { RouterOutlet } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';import { Project } from '../../models/projects';
 import { ProjectService } from '../../services/projects.service';
 import { FormsModule } from '@angular/forms'; // We must declare the library to work with Angular forms
 import { UploadService } from '../../services/upload.service'; // We load the service to use the function
@@ -10,9 +11,12 @@ import { Global } from '../../services/global'; // we import this for use the ur
   selector: 'app-create',
   standalone: true,
   imports: [
+    // We must declare the component to work with it
+    RouterOutlet, // Important to import the router as well in order to work with it.
+    RouterModule, // Important to import the routermodule as well in order to work with the directive routerLink
     FormsModule,
     CommonModule
-  ], // We must declare the component to work with it
+  ], 
   templateUrl: './create.component.html',
   styleUrl: './create.component.css',
   providers: [
@@ -24,6 +28,7 @@ export class CreateComponent {
 
   public title: string;
   public project: Project;
+  public save_project: any;
   public status: string = "";
   public filesToUpload: Array<File> = [];
 
@@ -53,9 +58,10 @@ export class CreateComponent {
 
           /* Upload the image */
           this._uploadService.makeFileRequest(Global.url + "upload-image/" + response.project._id, [], this.filesToUpload, 'image')
-          .then((result:any) => {
+          .then((result:any) => {            
+            this.save_project = result.project;
+
             this.status = "succes";
-            console.log(result);
             form.reset(); // Method to clear the form
           });
         } else {
