@@ -11,7 +11,7 @@ export class ProjectService{
     constructor (
         private _http: HttpClient // Load HttpClient
     ){
-        this.url = Global.url;
+        this.url = Global.url; 
     }
 
     testService(){
@@ -30,18 +30,18 @@ export class ProjectService{
     // Method to obtain projects from the database
     getProjects(): Observable<any> {
         // We declare a variable to send information in JSON format
-        let headers = new HttpHeaders().set('Content-Type',"application/json");
+        let headers = new HttpHeaders().set('Content-Type',"application/json"); // We set up the headers (how the information wil be sent)
 
         // We make an AJAX petition using the GET method
-        return this._http.get(this.url + 'projects', {headers: headers});
+        return this._http.get(this.url + 'projects', {headers: headers}); // We pass the URL of our API, concatenate the API method, and the headers.
     }
 
     // Method to obtain a single project
     getProject(id: any): Observable<any>{
-        let headers = new HttpHeaders().set('Content-Type','application/json'); // Establecemos las cabeceras (como se va a enviar la información)
+        let headers = new HttpHeaders().set('Content-Type','application/json'); // We set up the headers (how the information wil be sent)
 
-        // Para dar de alta algo en el API necesitamos usar el siguiente metodo
-        return this._http.post(this.url + 'project/' + id, {headers: headers}); // le pasamos la url de nuestra API, le concatenamos el metodo de la api, le pasamos la id edl proyecto y los headers
+        // We make an AJAX petition using the GET method
+        return this._http.get(this.url + 'project/'+id, {headers: headers}); // We pass the URL of our API, concatenate the API method with the id param, and for the last, the headers.
 
     }
 
