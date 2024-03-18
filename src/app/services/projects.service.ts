@@ -45,4 +45,13 @@ export class ProjectService{
 
     }
 
+    // Method to delete a project
+    deleteProject(id:any){
+        let headers = new HttpHeaders().set('Content-Type','application/json'); // We set up the headers (how the information wil be sent)
+
+        // We make an AJAX petition using Delete method
+        return this._http.delete(this.url + 'project/'+id, {headers: headers}); // We pass the URL of our API, concatenate the API method with the id param, and for the last, the headers.
+    }
+
+
 }

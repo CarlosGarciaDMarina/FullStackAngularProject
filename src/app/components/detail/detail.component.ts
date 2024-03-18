@@ -57,4 +57,21 @@ export class DetailComponent implements OnInit{
     );
   }
 
+  // Method to delete a project
+  deleteProject(id:any){
+    // Call the deleteProject method from the response to the local project variable
+    this._projectService.deleteProject(id).subscribe(
+      response => {
+        // if we receive a response, redirect the user to the projects page
+        if(response){
+          this._router.navigateByUrl('proyectos');
+        }
+      }, 
+      // If we do not receive a response, show a console message with the error
+      error => {
+        console.log(<any>error);
+      }
+    );
+  }
+
 }
