@@ -53,5 +53,15 @@ export class ProjectService{
         return this._http.delete(this.url + 'project/'+id, {headers: headers}); // We pass the URL of our API, concatenate the API method with the id param, and for the last, the headers.
     }
 
+    // Method to updated the project
+    updateProject(project: any): Observable<any> {
+        let params = JSON.stringify(project) // We convert the project to JSON file
+        let headers = new HttpHeaders().set('Content-Type','application/json'); // We set up the headers (how the information wil be sent)
+
+        // We make an AJAX petition using Delete method
+        return this._http.put(this.url + 'project/'+project._id,params, {headers: headers}); // We pass the URL of our API, concatenate the API method with the id param, and for the last, the headers.
+
+    }
+
 
 }

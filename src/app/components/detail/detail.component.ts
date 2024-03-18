@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Project } from '../../models/projects';
+import { RouterOutlet } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';import { Project } from '../../models/projects';
 import { ProjectService } from '../../services/projects.service';
-import { Global } from '../../services/global';
+import { FormsModule } from '@angular/forms'; // We must declare the library to work with Angular forms
+import { UploadService } from '../../services/upload.service'; // We load the service to use the function
+import { Global } from '../../services/global'; // we import this for use the url
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
   standalone: true,
   imports: [
-    CommonModule // Important to import this module in order to be able to use directives
+    // We must declare the component to work with it
+    RouterOutlet, // Important to import the router as well in order to work with it.
+    RouterModule, // Important to import the routermodule as well in order to work with the directive routerLink
+    FormsModule,
+    CommonModule
   ],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css',

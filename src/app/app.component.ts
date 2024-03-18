@@ -12,6 +12,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { EditComponent } from './components/edit/edit.component';
 import { ErrorComponent } from './components/error/error.component';
 
 @Component({
@@ -27,6 +28,7 @@ import { ErrorComponent } from './components/error/error.component';
     CreateComponent,
     ContactComponent,
     DetailComponent,
+    EditComponent,
     ErrorComponent
   ],
   templateUrl: './app.component.html',
