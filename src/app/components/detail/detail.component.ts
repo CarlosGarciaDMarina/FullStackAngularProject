@@ -28,6 +28,7 @@ export class DetailComponent implements OnInit{
 
   public url: string;
   public project: Project; // we define the object
+  public confirm: boolean;
 
   constructor(
     // Declare dependencies for the project service (_projectService), router (_router), and activated route (_route).
@@ -37,7 +38,7 @@ export class DetailComponent implements OnInit{
   ){
     this.url = Global.url;
     this.project = new Project("","","","",0,"",""); // we initialize the object
-
+    this.confirm = false;
   }
 
   ngOnInit() {
@@ -62,6 +63,10 @@ export class DetailComponent implements OnInit{
         console.log(<any>error);
       }
     );
+  }
+
+  setConfirm(confirm: boolean){
+    this.confirm = confirm;
   }
 
   // Method to delete a project

@@ -169,13 +169,14 @@ article.about {
     
 }
 
-.container .data{
+.container .data {
     float: left;
     margin-left: 15px;
+    width: 40%;
 }
 
-.container .data .botones{
-    display: inline-flex;
+.container .data .botones a {
+    display: inline-block;
 }
 
 .container h2 {
@@ -323,4 +324,10 @@ form input[disabled]{
 .project a {
     text-decoration: none;
     color:rgba(16, 67, 133, 1);
+}
+
+.confirm {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
 }
