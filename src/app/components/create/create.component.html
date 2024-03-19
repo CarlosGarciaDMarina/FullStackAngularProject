@@ -18,7 +18,7 @@
         </span><br>
 
         <label for="description">Descripción</label>
-        <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+        <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required cols="57" rows="10"></textarea>
         <span class="form_error" *ngIf="description.touched && !description.valid">
             La descripción es obligatoria
         </span><br>

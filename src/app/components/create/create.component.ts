@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { Routes, RouterModule } from '@angular/router';import { Project } from '../../models/projects';
+import { Routes, RouterModule } from '@angular/router';
+import { Project } from '../../models/projects';
 import { ProjectService } from '../../services/projects.service';
 import { FormsModule } from '@angular/forms'; // We must declare the library to work with Angular forms
 import { UploadService } from '../../services/upload.service'; // We load the service to use the function
